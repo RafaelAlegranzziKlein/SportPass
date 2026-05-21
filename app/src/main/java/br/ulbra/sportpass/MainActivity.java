@@ -57,20 +57,21 @@ public class MainActivity extends AppCompatActivity {
     }else {
             double passos = Double.parseDouble(edPassos.getText().toString());
             double multi = 0;
+            double multi2 = 1;
             String res;
             int op = rgOpcoe.getCheckedRadioButtonId();
             if (op == R.id.rb50) {
-                multi = multi + 0.5;
+                multi =+ 0.5;
             } else if (op == R.id.rb80) {
-                multi = multi + 0.8;
+                multi =+ 0.8;
             } else {
-                multi = multi + 1.1;
+                multi =+ 1.1;
             }
             if (cbCorrendo.isChecked()) {
-                multi = multi + 0.1;
+                multi2 += 0.1;
             }
             DecimalFormat df = new DecimalFormat("0.00");
-            double percorrido = passos * multi;
+            double percorrido = (passos * multi)*multi2;
             double metros = percorrido / 100;
             res = "A quantidade em metros percorrida foi de : " + df.format(metros);
             txRes.setText(res);
