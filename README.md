@@ -6,7 +6,8 @@ Aplicativo Android desenvolvido em Java para calcular a distância percorrida co
 
 ## 📱 Preview do App
 
-![SportPass](attachment\:image.png)
+<img width="269" height="527" alt="image" src="https://github.com/user-attachments/assets/bd0cb35c-79b6-4340-b7be-1c7022ba4682" />
+
 
 ---
 
