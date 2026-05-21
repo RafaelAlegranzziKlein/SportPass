@@ -139,10 +139,7 @@ Este projeto foi desenvolvido para praticar:
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Seu Nome**
+Desenvolvido por **Rafael Alegranzzi Klein**
 
 ---
 
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
