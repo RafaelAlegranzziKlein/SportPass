@@ -5,34 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#40C4FF"
-    tools:context=".MainActivity" >
+    android:background="#00B8D4"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="226dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/carter_one"
         android:text="SportPass"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="327dp"
         android:layout_height="245dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/fundo_arredondado"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -45,6 +46,7 @@
             android:fontFamily="@font/carter_one"
             android:hint="Informe a quantidade de passos"
             android:inputType="number"
+            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -61,44 +63,46 @@
             android:text="Informe o tamanho do passo"
             android:textAlignment="center"
             android:textColor="#000"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <RadioGroup
+            android:id="@+id/rgOpcoes"
             android:layout_width="match_parent"
             android:layout_height="49dp"
-            android:checkedButton="@id/radioButton2"
+            android:checkedButton="@id/rb80"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rb50"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/Amarelo"
                 android:fontFamily="@font/carter_one"
                 android:text="curto ±50cm"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rb80"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/Amarelo"
                 android:fontFamily="@font/carter_one"
                 android:text="medio ±80cm"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="11sp" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/rb110"
+                android:layout_width="117dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:buttonTint="@color/Amarelo"
                 android:fontFamily="@font/carter_one"
                 android:text="longo ±110cm"
                 android:textColor="@color/white"
-                android:textSize="10sp" />
+                android:textSize="11dp" />
+
         </RadioGroup>
 
         <TextView
@@ -117,8 +121,8 @@
             android:textSize="16sp" />
 
         <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="match_parent"
+            android:id="@+id/cbCorrendo"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/carter_one"
             android:text="Correndo"
@@ -127,6 +131,69 @@
             android:textSize="24sp" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="332dp"
+        android:layout_height="283dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/fundo_arredondado"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="31dp" />
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="234dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E0F2F1"
+            android:fontFamily="@font/carter_one"
+            android:text="Calcular"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="146dp"
+            android:background="@drawable/fundo_menor"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtRes"
+                android:layout_width="290dp"
+                android:layout_height="136dp"
+                android:fontFamily="@font/carter_one"
+                android:text="SEU CALCULO APARECERA AQUI"
+                android:textColor="#000"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="147dp"
+        android:layout_height="124dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:srcCompat="@drawable/img"
+        tools:layout_editor_absoluteY="-3dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
